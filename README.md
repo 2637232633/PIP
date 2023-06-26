@@ -13,11 +13,11 @@ The process will involve the following steps:
 
 Encryption: 
 The plaintext message will be encrypted using the AES encryption algorithm with a symmetric key which is generated based on the password entered by the user. Afterwards, the system generates a Pixel Location Password randomly, and then uses the information from the Original Image and the Pixel Location Password to create a random seed, which is used to generate a Location Sequence. Finally, the Encoded Message is hidden in the Original Image using LSB techniques based on the Location Sequence, resulting in the Stego Image.
-
+![image](pic\process1.png)
  
 Decryption: 
 To retrieve the hidden message from the image, frstly, the Location Sequence is generated using PIP based on the Stego Image and the Pixel Location Sequence, and then the Encoded Message hidden in the image is extracted using LSB techniques according to the Location Sequence. Finally, the encrypted information is decrypted into plaintext using a password through ASE.
-
+![image](pic\process2.png)
 
  
 
